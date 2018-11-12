@@ -1,3 +1,5 @@
+import { ErrorBoundary } from "./bugsnag";
+
 import "@babel/polyfill";
 import React from "react";
 import ReactDOM from "react-dom";
@@ -8,7 +10,11 @@ import "./index.css";
 import "./fonts/index.css";
 
 i18n().then(() => {
-  ReactDOM.render(<BrowserRouter children={<Router/>}/>, document.querySelector("#root"));
+  ReactDOM.render(
+    <ErrorBoundary>
+      <BrowserRouter children={<Router/>}/>
+    </ErrorBoundary>,
+    document.querySelector("#root"));
 });
 
 if ("serviceWorker" in navigator) {
