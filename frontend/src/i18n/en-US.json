@@ -33,6 +33,7 @@
     "cancel-meeting": "Cancel meeting"
   },
   "full-screen": "Full screen",
+  "start": "Start",
   "errors": {
     "unable-to-connect-server": "Unable to connect to the server",
     "check-internet-and-try-again": "Check internet connection and try again",

@@ -33,6 +33,7 @@
     "cancel-meeting": "Avbryta mötet"
   },
   "full-screen": "Fullskärm",
+  "start": "Starta",
   "errors": {
     "unable-to-connect-server": "Det går inte att ansluta till fjärrservern",
     "check-internet-and-try-again": "Kolla internetuppkoppling och försök igen",

@@ -1,4 +1,5 @@
 import React from "react";
+import i18next from "i18next";
 import { connect } from "react-redux";
 import { Button, LoaderButton } from "theme";
 import { prettyFormatMinutes } from "services/formatting";
@@ -20,7 +21,7 @@ const RoomAvailable = props => {
 
   return (
     <ButtonSet>
-      <Button disabled success children="Start"/>
+      <Button disabled success children={i18next.t("start")} />
       {props.minutesToNextMeeting > 20 && <CreateButton value={15} name="create-15"/>}
       {props.minutesToNextMeeting > 40 && <CreateButton value={30} name="create-30"/>}
       {props.minutesToNextMeeting > 70 && <CreateButton value={60} name="create-60"/>}
