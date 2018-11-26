@@ -76,11 +76,20 @@ const CurrentTime = styled.span`
 `;
 
 const MainContent = styled.div`
-  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0.5em;
+
+  @media screen and (orientation:portrait){
+    flex: 1 auto 1;
+    align-items:center;
+    padding: 1.5em;
+  }
+
+  @media screen and (orientation:landscape){
+    flex: 1 1 auto;
+    padding: .5em;
+  }
 `;
 
 const Footer = styled.div`
@@ -89,8 +98,12 @@ const Footer = styled.div`
 `;
 
 const ActionsBarWrapper = styled.div`
-  margin: 1rem 0;
-  height: 3rem;
+  @media screen and (orientation:landscape){
+    margin: 1rem 0;
+    height: 3rem;
+  }
+    
+  display:flex;
 `;
 
 const CalendarView = props => (
