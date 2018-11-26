@@ -21,7 +21,9 @@ const RoomAvailable = props => {
   );
 
   const StartButton = styled(Button)`
-    border-radius: 0em;  
+    border-radius: 0em; 
+    color:white;
+    background:#F7522E;
     @media screen and (orientation:portrait){
       font-size: 2em;
       width: 100%;
@@ -33,7 +35,7 @@ const RoomAvailable = props => {
 
   return (
     <div>  
-      {props.minutesToNextMeeting > 0 && <StartButton disabled success children={i18next.t("start") }/>}
+      {props.minutesToNextMeeting > 0 && <StartButton style={{opacity:"1"}} disabled success children={i18next.t("start") }/>}
       <ButtonSet>
         {props.minutesToNextMeeting > 20 && <CreateButton value={15} name="create-15"/>}
         {props.minutesToNextMeeting > 40 && <CreateButton value={30} name="create-30"/>}

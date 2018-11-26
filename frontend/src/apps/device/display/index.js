@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   width: 100%;
   box-sizing: border-box;
 
-  background: #f5f7fb;
+  background: #F3F3F3;
   font-family: "Roboto", sans-serif;
 
   display: flex;
@@ -61,7 +61,8 @@ const Header = styled.header`
   display: flex;
   flex: 0 0 auto;
   justify-content: space-between;
-  background: white;
+  background: #696969;
+  color:white;
   border-bottom: 0.1rem solid #ccc;
 `;
 
