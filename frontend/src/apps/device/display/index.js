@@ -94,7 +94,7 @@ const MainContent = styled.div`
 `;
 
 const Footer = styled.div`
-  padding: 0.5em;
+  padding: 1.5em;
   flex: 0 0 auto;
 `;
 
