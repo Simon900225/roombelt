@@ -101,7 +101,6 @@ const Button = styled(UnderlyingComponent)`
   text-align: center;
   font-family: "Roboto", sans-serif;
   border-radius: 0.2em;
-  font-size: 1em;
   padding: 0.75em;
   user-select: none;
   white-space: nowrap;
@@ -110,6 +109,13 @@ const Button = styled(UnderlyingComponent)`
 
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
+
+  @media screen and (orientation:portrait){
+    font-size: 2em;
+  }
+  @media screen and (orientation:landscape){
+    font-size: 1em;
+  }
 
   ${defaultColors};
   ${whiteColors};
