@@ -1,5 +1,6 @@
 import React from "react";
 import i18next from "i18next";
+import styled, { css } from "styled-components/macro";
 import { connect } from "react-redux";
 import { Button, LoaderButton } from "theme";
 import { prettyFormatMinutes } from "services/formatting";
@@ -19,15 +20,28 @@ const RoomAvailable = props => {
     />
   );
 
+  const StartButton = styled(Button)`
+    border-radius: 0em;  
+    @media screen and (orientation:portrait){
+      font-size: 2em;
+      width: 100%;
+    }
+    @media screen and (orientation:landscape){
+      font-size: 1em;
+    }
+  `;
+
   return (
-    <ButtonSet>
-      <Button disabled success children={i18next.t("start")} />
-      {props.minutesToNextMeeting > 20 && <CreateButton value={15} name="create-15"/>}
-      {props.minutesToNextMeeting > 40 && <CreateButton value={30} name="create-30"/>}
-      {props.minutesToNextMeeting > 70 && <CreateButton value={60} name="create-60"/>}
-      {props.minutesToNextMeeting > 130 && <CreateButton value={120} name="create-120"/>}
-      {props.minutesToNextMeeting <= 130 && <CreateButton value={props.minutesToNextMeeting} name="create-custom"/>}
-    </ButtonSet>
+    <div>  
+      {props.minutesToNextMeeting > 0 && <StartButton disabled success children={i18next.t("start") }/>}
+      <ButtonSet>
+        {props.minutesToNextMeeting > 20 && <CreateButton value={15} name="create-15"/>}
+        {props.minutesToNextMeeting > 40 && <CreateButton value={30} name="create-30"/>}
+        {props.minutesToNextMeeting > 70 && <CreateButton value={60} name="create-60"/>}
+        {props.minutesToNextMeeting > 130 && <CreateButton value={120} name="create-120"/>}
+        {props.minutesToNextMeeting <= 130 && <CreateButton value={props.minutesToNextMeeting} name="create-custom"/>}
+      </ButtonSet>
+    </div>
   );
 };
 
