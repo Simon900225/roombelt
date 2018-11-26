@@ -25,6 +25,13 @@ const Badge = styled.span`
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.2em;
+  
+  @media screen and (orientation:portrait){
+    font-size: 2em;
+  }
+  @media screen and (orientation:landscape){
+    font-size: 1em;
+  }
 
   ${props => badgeTypes[Object.keys(badgeTypes).find(typeName => props[typeName]) || "secondary"]};
 `;
