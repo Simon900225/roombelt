@@ -6,9 +6,16 @@ export const MeetingHeader = styled.div`
 `;
 
 export const MeetingTitle = styled.div`
-  font-size: 1.2em;
+  @media screen and (orientation:portrait){  
+    font-size: 2.5em;
+  }
+  @media screen and (orientation:landscape){  
+    font-size: 1.2em;
+  }  
 `;
 
 export const MeetingSubtitle = styled.div`
-  
+  @media screen and (orientation:portrait){  
+    font-size: 2em;
+  }
 `;
